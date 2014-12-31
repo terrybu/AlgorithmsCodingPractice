@@ -1,3 +1,5 @@
+#Given a string of characters, find the first unique non-repeating character of the string
+
 def findFirstNonRepeatingCharacter(string)
 
 	#we are going to create a hash map in this first loop over the string.

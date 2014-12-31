@@ -15,7 +15,7 @@ def reverseArray(array, firstIndex, lastIndex)
 		return array
 	end
 end
-#I realized that you can't do this without 3 arguments because you have to do recursion, and then you need those variables to survive
+#I realized that you can't do this without 3 arguments because you have to do recursion, and then you need those variables to persist
 
 
 print reverseArray(array, 0, array.count-1)
