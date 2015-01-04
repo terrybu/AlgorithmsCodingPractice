@@ -7,13 +7,13 @@ def insertionSort(array)
 	#inside loop iterates over every index less than i and compares it with value at i
 
 	for i in 1..array.count-1
-		valuei = array[i]
+		key = array[i]
 		j = i - 1
-		while j >= 0 && array[j] > valuei #if the element that comes before i is greater than valuei, we exchange
-			array[j+1] = array[j] #i element gets replaced by the larger element
+		while j >= 0 && array[j] > key 
+			array[j+1] = array[j] 
 			j = j -1
 		end
-		array[j+1] = valuei #j the element that comes before i will get replaced by valuei
+		array[j+1] = key 
 	end
 	return array
 end
