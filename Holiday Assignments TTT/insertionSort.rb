@@ -43,4 +43,3 @@ def main(n)
 end
 
 main(20000)
-
