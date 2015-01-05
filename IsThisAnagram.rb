@@ -30,3 +30,6 @@ end
 puts areTheyAnagrams("amor", "roma")
 puts areTheyAnagrams("banana", "dragon")
 puts areTheyAnagrams("elvis", "lives")
+
+#http://www.algolist.net/Algorithms/Sorting/Bubble_sort
+#refer for bubblesort
