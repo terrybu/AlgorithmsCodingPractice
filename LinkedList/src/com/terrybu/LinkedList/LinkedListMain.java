@@ -8,23 +8,32 @@ public class LinkedListMain {
 		LinkedList linkedList = new LinkedList();
 		
 		Node firstNode = new Node("apple");		
-		linkedList.rootNode = firstNode;
+		linkedList.head = firstNode;
 		
-		//Inserting something to the beginning of a linkedlist is O(1)
-		linkedList.insertAtBeginning(new Node("banana"));
+		Node second = new Node("banana");
+		Node third = new Node("blueberries");
+		
+		//Inserting to the beginning of a linkedlist is O(1)
+		linkedList.insertAtBeginning(second);
+		
+		//Inserting to the middle of a list is O(1) if it's a known position, since you just pass the pointer
+		linkedList.insertAfter(second, third);
+		
+		//Inserting to the end of a list is O(n) if you don't know the tail. If you have tail property, then it's O(1);
+		linkedList.insertAtEnd(new Node("endoBendo"));
 		
 		
-		
-		
-		
-		
-		
+		//Inserting to unknown place in the middle is O(n) 
+		linkedList.insertInMiddle(new Node("middleSter"));
+		linkedList.insertInMiddle(new Node("middleSter2"));
+
 		//Traversing a linked list
+		linkedList.traverse();		
+		
+		//Should delete banana
+		linkedList.deleteFromBeginning();
+		
 		linkedList.traverse();
-		
-		
-		
-		
 		
 	}
 
