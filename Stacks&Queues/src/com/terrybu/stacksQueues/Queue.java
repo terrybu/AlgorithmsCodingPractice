@@ -25,9 +25,12 @@ public class Queue {
 	Node dequeue() {
 		//we dequeue off the front of the line
 		//but first, we make the 2nd to head, the new head
-		Node nodeToDequeue = this.head;
-		this.head = head.next;
-		return nodeToDequeue;
+		if (this.head != null) {
+			Node nodeToDequeue = this.head;
+			this.head = head.next;
+			return nodeToDequeue;
+		}
+		return null; 
 	}
 	
 	void traverse() {

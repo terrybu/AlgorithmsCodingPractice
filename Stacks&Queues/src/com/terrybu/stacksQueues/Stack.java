@@ -11,32 +11,31 @@ public class Stack {
 	
 	Node pop() {
 		//popping off the top means pop it off and return it,
-		Node nodeToPop = top;  
-		top = top.next;
-		return nodeToPop;
+		if (top != null) {
+			Node nodeToPop = top;  
+			top = top.next;
+			return nodeToPop;
+		}
+		return null; 
 	}
 	
 	void push(Node element) {
-		if (top == null) {
-			this.top = element;
-		}
-		else {
-			Node previousTop = top; 
-			this.top = element; 
-			this.top.next = previousTop; 
-		}
+		element.next = top; 
+		this.top = element; 
 	}
 	
 	void traverseFromTop() {
 		Node node = top;
-		System.out.println("**************************top of stack: " + top.data);
+		System.out.println("**************************");
 		while (node != null) {
 			System.out.println(node.data);
 			node = node.next;
 		}
 		System.out.println("**************************");
-
 	}
 	
+	Boolean isEmpty() {
+		return (this.top == null);
+	}
 	
 }

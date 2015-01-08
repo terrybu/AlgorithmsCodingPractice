@@ -33,6 +33,21 @@ public class Main {
 		
 		System.out.println(queue.dequeue().data); //should dequeue front of line 10
 		queue.traverse();
+		
+		
+		QueueWithTwoStacks queueWithStacks = new QueueWithTwoStacks();
+		Node ax = new Node(100);
+		Node bx = new Node(200);
+		Node cx = new Node(300);
+		Node dx = new Node(400);
+		queueWithStacks.enqueue(ax);
+		queueWithStacks.enqueue(bx);
+		queueWithStacks.enqueue(cx);
+		queueWithStacks.enqueue(dx);
+		queueWithStacks.display();
+		queueWithStacks.dequeue();
+		queueWithStacks.display();
+
 	}
 
 }
