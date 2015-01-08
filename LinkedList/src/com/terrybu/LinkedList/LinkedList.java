@@ -1,5 +1,7 @@
 package com.terrybu.LinkedList;
 
+import java.util.Hashtable;
+
 public class LinkedList {
 	Node head; 
 	
@@ -68,13 +70,56 @@ public class LinkedList {
 	}
 	
 	public void deleteFromBeginning() { //O(1) 
-		Node nodeToDelete = head;
 		head = head.next;
-		nodeToDelete = null;
+	}
+	
+	public void deleteFromEnd() { //O(n) unless you keep track of tail
+		Node current = this.head;
+		Node previous = null;
+		while (current != null) {
+			previous = current; 
+			current = current.next;
+			if (current.next == null) { //we hit tail
+				previous.next = null;
+				return;
+			}
+		}
+	}
+	
+	public void deleteDuplicates(Node node) {
+		Hashtable table = new Hashtable();
+		Node previous = null;
+		while (node != null) {
+			if (table.containsKey(node.data)) {
+				//we found a duplicate
+				previous.next = node.next;
+			}
+			else {
+				table.put(node.data, true);
+			}
+			previous = node;
+			node = node.next;
+		}
+	}
+	
+	public void deleteNode(Node node) { //given access to a node, delete a node in middle of list
+		
+		if (node == null)
+			return;
+		else if (node.next == null) //we are at the tail. 
+			//traverse to the end and delete it
+			this.deleteFromEnd();
+		else {
+			Node next = node.next; //a b c d - next is c, trying to delete b
+			node.data = next.data; //a c c d 
+			node.next = next.next; //a c d - jump a pointer from first c to d - dealocate second c
+		}
 	}
 	
 	
+	
 	public void reverseList(LinkedList linkedList) {
+		
 		
 	}
 	

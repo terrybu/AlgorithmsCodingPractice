@@ -29,10 +29,23 @@ public class LinkedListMain {
 
 		//Traversing a linked list
 		linkedList.traverse();		
+
 		
-		//Should delete banana
-		linkedList.deleteFromBeginning();
 		
+		Node duplicateNode = new Node("blueberries");
+		linkedList.insertAtEnd(duplicateNode);
+		linkedList.traverse();
+
+		System.out.println("delete deuplicate blueberry");
+		linkedList.deleteDuplicates(third);
+		linkedList.traverse();
+		
+		System.out.println("delete blueberry in the middle");
+		linkedList.deleteNode(third);
+		linkedList.traverse();
+
+		System.out.println("delete from end");
+		linkedList.deleteFromEnd();
 		linkedList.traverse();
 		
 	}
