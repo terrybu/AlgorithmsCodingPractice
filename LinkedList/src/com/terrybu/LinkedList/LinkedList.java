@@ -10,7 +10,7 @@ public class LinkedList {
 
 	public void traverse () {
 		System.out.println("traversing ... ");
-		Node node = this.head;
+		Node node = head;
 		while (node != null) {
 			//do something
 			System.out.println(node.data);
@@ -21,7 +21,7 @@ public class LinkedList {
 	
 	public long length() {
 		long counter = 0;
-		Node node = this.head;
+		Node node = head;
 		while (node != null) {
 			//do something
 			counter++;
@@ -32,8 +32,8 @@ public class LinkedList {
 	
 	//Insert node to the beginning of a linked list is O(1)
 	public void insertAtBeginning(Node newNode) {
-		newNode.next = this.head;
-		this.head = newNode;
+		newNode.next = head;
+		head = newNode;
 	}
 	
 	//Insert node after a certain node (in the middle between two nodes) is O(1) in a situation like this where you know the previous node
@@ -45,8 +45,8 @@ public class LinkedList {
 	
 	//otherwise, you gotta loop through and find "middle" - whether you find some data to search, or find midpoint, this loop causes O(n)
 	public void insertInMiddle(Node newNode) {
-		long midpoint = this.length()/2;
-		Node node = this.head;
+		long midpoint = length()/2;
+		Node node = head;
 		for (int i=0; i < midpoint-1; i++) {
 			node = node.next;
 		}
@@ -55,7 +55,7 @@ public class LinkedList {
 	}
 		
 	public void insertAtEnd(Node newNode) {
-		Node node = this.head;
+		Node node = head;
 		while (node != null) { 
 			//if we don't know the tail, we need a loop to find the end of the list --> O(n) for finding end.
 			if (node.next == null) {
@@ -68,8 +68,8 @@ public class LinkedList {
 	}
 	
 	public void deleteFromBeginning() { //O(1) 
-		Node nodeToDelete = this.head;
-		this.head = this.head.next;
+		Node nodeToDelete = head;
+		head = head.next;
 		nodeToDelete = null;
 	}
 	
