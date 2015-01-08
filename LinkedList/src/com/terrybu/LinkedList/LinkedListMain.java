@@ -20,7 +20,7 @@ public class LinkedListMain {
 		linkedList.insertAfter(second, third);
 		
 		//Inserting to the end of a list is O(n) if you don't know the tail. If you have tail property, then it's O(1);
-		linkedList.insertAtEnd(new Node("endoBendo"));
+		linkedList.insertAtEnd(new Node("endObject"));
 		
 		
 		//Inserting to unknown place in the middle is O(n) 
@@ -30,8 +30,6 @@ public class LinkedListMain {
 		//Traversing a linked list
 		linkedList.traverse();		
 
-		
-		
 		Node duplicateNode = new Node("blueberries");
 		linkedList.insertAtEnd(duplicateNode);
 		linkedList.traverse();
@@ -48,6 +46,9 @@ public class LinkedListMain {
 		linkedList.deleteFromEnd();
 		linkedList.traverse();
 		
+		
+		linkedList.reverseList(linkedList);
+		linkedList.traverse();
 	}
 
 }

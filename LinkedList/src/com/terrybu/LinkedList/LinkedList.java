@@ -103,7 +103,6 @@ public class LinkedList {
 	}
 	
 	public void deleteNode(Node node) { //given access to a node, delete a node in middle of list
-		
 		if (node == null)
 			return;
 		else if (node.next == null) //we are at the tail. 
@@ -112,15 +111,22 @@ public class LinkedList {
 		else {
 			Node next = node.next; //a b c d - next is c, trying to delete b
 			node.data = next.data; //a c c d 
-			node.next = next.next; //a c d - jump a pointer from first c to d - dealocate second c
+			node.next = next.next; //a c d - jump a pointer from first c to d - deallocate second c
 		}
 	}
 	
-	
-	
 	public void reverseList(LinkedList linkedList) {
+		Node current, prev, next;
 		
-		
+		current = this.head;
+		prev = null;
+		while (current != null) {
+			next = current.next;
+			current.next = prev;
+			prev = current;
+			current = next;
+		}
+		this.head = prev;
 	}
 	
 }
