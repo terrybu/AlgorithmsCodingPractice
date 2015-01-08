@@ -17,6 +17,22 @@ public class Main {
 		stack.pop();
 		//now we should only have aNode or 1 at bottom
 		stack.traverseFromTop();
+		
+		
+		
+		Queue queue = new Queue();
+		Node a = new Node(10);
+		Node b = new Node(20);
+		Node c = new Node(30);
+		Node d = new Node(40);
+		queue.enqueue(a);
+		queue.enqueue(b);
+		queue.enqueue(c);
+		queue.enqueue(d);
+		queue.traverse();//10 20 30 40
+		
+		System.out.println(queue.dequeue().data); //should dequeue front of line 10
+		queue.traverse();
 	}
 
 }

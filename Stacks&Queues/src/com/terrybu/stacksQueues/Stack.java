@@ -29,8 +29,7 @@ public class Stack {
 	
 	void traverseFromTop() {
 		Node node = top;
-		System.out.println("top of stack: " + top.data);
-		System.out.println("**************************");
+		System.out.println("**************************top of stack: " + top.data);
 		while (node != null) {
 			System.out.println(node.data);
 			node = node.next;
