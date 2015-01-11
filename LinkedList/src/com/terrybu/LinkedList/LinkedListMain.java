@@ -47,8 +47,13 @@ public class LinkedListMain {
 		linkedList.traverse();
 		
 		
-		linkedList.reverseList(linkedList);
+		linkedList.reverseList();
 		linkedList.traverse();
+		
+		System.out.println(linkedList.nthToLastElement(1).data);
+		System.out.println(linkedList.nthToLastElement(2).data);
+		System.out.println(linkedList.nthToLastElement(3).data);
+
 	}
 
 }

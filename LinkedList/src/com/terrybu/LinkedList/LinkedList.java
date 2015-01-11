@@ -1,6 +1,6 @@
 package com.terrybu.LinkedList;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 
 public class LinkedList {
 	Node head; 
@@ -87,7 +87,7 @@ public class LinkedList {
 	}
 	
 	public void deleteDuplicates(Node node) {
-		Hashtable table = new Hashtable();
+		HashMap<String, Boolean> table = new HashMap<String, Boolean>();
 		Node previous = null;
 		while (node != null) {
 			if (table.containsKey(node.data)) {
@@ -115,7 +115,7 @@ public class LinkedList {
 		}
 	}
 	
-	public void reverseList(LinkedList linkedList) {
+	public void reverseList() {
 		Node current, prev, next;
 		
 		current = this.head;
@@ -128,6 +128,29 @@ public class LinkedList {
 		}
 		this.head = prev;
 	}
+	
+	Node nthToLastElement(int n) {
+		if (this.head == null)
+			return null;
+		int length = 1;
+		Node current = this.head;
+		while (current.next != null) {
+			length += 1;
+			current = current.next;
+		}
+		//now length is count of all the nodes in the list
+		if (length <= n)
+			return null;
+		
+		int i = 1;
+		current = this.head;
+		while (i < length-n) {
+			current = current.next;
+			i = i + 1;
+		}
+		return current;
+	}
+	
 	
 }
 
