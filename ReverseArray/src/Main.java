@@ -5,13 +5,15 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
 		int[] myIntArray = {1,2,3,4,5};
-		System.out.println(Arrays.toString(reverseArrayIteratively(myIntArray, 0, myIntArray.length-1)));
+		System.out.println(Arrays.toString(reverseArrayIteratively(myIntArray)));
 		System.out.println(Arrays.toString(reverseArrayRecursively(myIntArray, 0, myIntArray.length-1)));
 	
 		
 	}
 	
-	public static int[] reverseArrayIteratively(int[] array, int first, int end) {
+	public static int[] reverseArrayIteratively(int[] array) {
+		int first = 0;
+		int end = array.length-1;
 		while (first < end) {
 			int temp = array[end];
 			array[end] = array[first];
