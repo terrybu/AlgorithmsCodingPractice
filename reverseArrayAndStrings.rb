@@ -1,4 +1,5 @@
 def reverseString(string)
+	#by swapping
 	lastIndex = string.length-1
 	for i in 0..(string.length/2-1)
 		lastChar = string[lastIndex-i]
@@ -9,7 +10,7 @@ def reverseString(string)
 	return string
 end
 
-def reverseStringUsingNewString(string) #easier
+def reverseStringUsingNewString(string) #easier, similar to Java syntax 
 	newString = ""
 	(string.length-1).step(0,-1) do |i|
 		newString << string[i]

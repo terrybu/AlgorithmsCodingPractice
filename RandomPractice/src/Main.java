@@ -9,6 +9,12 @@ public class Main {
 		
 		int[] intArray = {2,1,1,4,1,1,2,4};
 		System.out.println(ArraySolver.returnNumberOfWaysSplitIntoTwoArraysBothHaveAllUniques(intArray));
+			
+		String test1 = "ramen";
+		System.out.println(StringSolver.reverseString(test1));
+		
+		String test2 = "Hello";
+		System.out.println(StringSolver.reverseRecurse(test2));
 		
 	}
 

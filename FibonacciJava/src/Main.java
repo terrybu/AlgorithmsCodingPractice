@@ -49,6 +49,7 @@ public class Main {
 	
 	static long fibonacciArrayMemoization(int n, long[] array) { 
 		//extremely more efficient when tracking time to use array instead of HashMap
+		//only caveat being that you have to allocate the size of the array before you run this function
 		if (n==0)
 			return 0;
 		else if (n==1)
@@ -65,6 +66,7 @@ public class Main {
 	//because there's an ordered sequence of integers as keys - and we never want to make the keys mutable
 	//Hashmap won't guarantee order either 
 	//But, it does make syntax pretty simple as you see below, you don't even to declare size beforehand like you do for arrayList
+	//1~2 orders slower than array memoization but 1~2 orders faster than no memoization
 	static long fibonacciCachingHashVersion(int n, HashMap<Integer, Long> h) {
 		if (n==0)
 			return 0;
