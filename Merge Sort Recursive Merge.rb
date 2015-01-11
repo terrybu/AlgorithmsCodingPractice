@@ -32,27 +32,24 @@ def mergeRecursive(array1, array2)
 		#so we return this element, and then recursively call "merge" again with the left array without index 0
 		oneElementArray = []
 		oneElementArray.push(array1[0])
-		return oneElementArray.concat(mergeRecursive(array1[1..array1.count-1], array2))
+		return oneElementArray + mergeRecursive(array1[1..-1], array2)
 	else
 		#our right aray's first element is less. 
 		#we do same thing but we reverse to above
 		oneElementArray = []
 		oneElementArray.push(array2[0])
-		return oneElementArray.concat(mergeRecursive(array1, array2[1..array2.count-1]))
+		return oneElementArray + mergeRecursive(array1, array2[1..-1])
 	end
 	#at the end of our recursion, we are basically left with something like
 	#[1].concat([3].concat([4]......all the way to the largest element))
 	#we are merging 1-element-sized arrays into a final array
 end
 
-# print "Merge Sorting Simply Two Arrays --> " 
-# p mergeRecursive([1,4,8,12], [3,6,9])
+print "Merge Sorting Two Arrays --> " 
+p mergeRecursive([1,4,8,12], [3,6,9])
 
 #cool ruby syntax for merging two different arrays - just plus them!
 #p [0,1,2] + [3,4,5]
 #but i didn't use it here for clarification purposes
 #syntax special for ruby
-
-# print "Merge Sorting Algorithm with Recursion --> "
-# p mergeSort([1,4,55,3,0,2,442,123,24])
 
