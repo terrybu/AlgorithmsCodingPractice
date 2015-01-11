@@ -40,6 +40,8 @@ public class Main {
 		System.out.println("");
 		binaryTree.postorderTraversal(f);
 		System.out.println("");
+		binaryTree.breadthFirstTraversal(g);
+		System.out.println("");
 
     	binaryTree.printAncestor(b, g);
     	binaryTree.printAncestor(a, h);

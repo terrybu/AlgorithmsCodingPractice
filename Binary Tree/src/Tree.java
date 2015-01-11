@@ -1,10 +1,12 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 public class Tree {
 	Node root;
 	
-	void preorderTraversal(Node node) {
+	void preorderTraversal(Node node) { //depth first traversal
 		System.out.print(node.getStringData() + " ");
 		if (node.getLeft() != null)
 			preorderTraversal(node.getLeft());
@@ -26,6 +28,23 @@ public class Tree {
 		if (node.getRight() != null)
 			postorderTraversal(node.getRight());
 		System.out.print(node.getStringData() + " ");
+	}
+	
+	void breadthFirstTraversal(Node node) {
+		Queue <Node> queue = new LinkedList<Node>();
+		if (this.root == null)
+			return;
+		queue.clear();
+		queue.add(this.root);
+		while (!queue.isEmpty()) {
+			Node dequeued = queue.remove();
+			System.out.print(dequeued.getStringData() + " ");
+			if (dequeued == node) 
+				System.out.print(" < -- found match! ");
+			if (dequeued.getLeft() != null) queue.add(dequeued.getLeft());
+			if (dequeued.getRight() != null) queue.add(dequeued.getRight());
+		}
+		
 	}
 	
 	Node findLowestCommonAncestor(Node p, Node q) {		
