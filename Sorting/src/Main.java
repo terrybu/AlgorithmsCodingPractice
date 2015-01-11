@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] array = {32,0,21,11,1, 100, 4,3,2,55, -3};
+		int[] array = {32,0,21,-3};
 		mergeSort(array);
 		for (int i : array) {
 			System.out.print(i);
@@ -17,6 +17,7 @@ public class Main {
 		//and then building them back up using "merge" 
 		//this mergeSort function itself stays very similar across languages, no need to change this
 		//but the "Merge" function below can have a lot of different approaches (recursive vs iterative etc) 
+		//this iterative version below for merge is very fast
 		if (array.length <= 1)
 			return;
 		else {
@@ -25,8 +26,8 @@ public class Main {
 			//copyOfRange is start...last (last one exclusive, may exist out of range
 			int[] rightArray = Arrays.copyOfRange(array, middleIndex, array.length);
 			
-			mergeSort(leftArray);
-			mergeSort(rightArray);
+			mergeSort(leftArray); //first time, it's 32, 0 ...  
+			mergeSort(rightArray); //first time it's 21, -3
 			
 			merge(array, leftArray, rightArray);
 		}

@@ -7,9 +7,10 @@ public class Main {
 		String test = "aaaaaabbbbbbdddddcaaaabbbbbpaaaabbbbdrrrr";
 		System.out.println(StringSolver.findFirstNonRepeatingCharacter(test));
 		
-		int[] intArray = {2,1,1,4,1,1,2,4};
-		System.out.println(ArraySolver.returnNumberOfWaysSplitIntoTwoArraysBothHaveAllUniques(intArray));
-			
+		int[] intArray = { 3,2,1,0,4,-2 };
+		ArraySolver.bubbleSort(intArray);
+		ArraySolver.printoutArray(intArray);
+		
 		String test1 = "ramen";
 		System.out.println(StringSolver.reverseString(test1));
 		
