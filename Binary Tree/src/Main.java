@@ -18,12 +18,19 @@ public class Main {
 		f.setRight(g);
 		b.setLeft(a);
 		b.setRight(d);
+		b.parent = f;
+		a.parent = b; 
+		c.parent = d;
 		d.setLeft(c);
 		d.setRight(e);
+		d.parent = b;
+		e.parent = d;
 		g.setRight(i);
+		g.parent = f;
 		i.setLeft(h);
+		i.parent =g;
+		h.parent = i;
 
-		
 		Tree binaryTree = new Tree();
 		binaryTree.root = f;
 		
@@ -32,6 +39,12 @@ public class Main {
 		binaryTree.inorderTraversal(f);
 		System.out.println("");
 		binaryTree.postorderTraversal(f);
+		System.out.println("");
+
+    	binaryTree.printAncestor(b, g);
+    	binaryTree.printAncestor(a, h);
+    	binaryTree.printAncestor(a, e);
+    	binaryTree.printAncestor(i, h);
 	}
 
 }

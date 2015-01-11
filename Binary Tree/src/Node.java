@@ -2,6 +2,7 @@ public class Node {
 	private Node left;
 	private Node right;
 	private String stringData;
+	public Node parent; 
 	
 	public Node getLeft() {
 		return left;
@@ -37,6 +38,7 @@ public class Node {
 		this.left = null;
 		this.right = null;
 		this.stringData = null;
+		this.parent = null;
 	}
 	
 }
