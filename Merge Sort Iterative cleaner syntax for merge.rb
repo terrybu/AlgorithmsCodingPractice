@@ -7,8 +7,8 @@ def mergeSortIterativeTest(array)
 	leftArray = array[0...midpoint]
 	rightArray = array[midpoint...array.length]
 
-	mergeSortIterative(leftArray)
-	mergeSortIterative(rightArray)
+	mergeSortIterativeTest(leftArray)
+	mergeSortIterativeTest(rightArray)
 
 	mergeIteratively(array, leftArray, rightArray)
 end
@@ -36,5 +36,5 @@ def mergeIteratively(original, left, right)
 end
 
 array = [-2,100,5,1000,3]
-mergeSortIterative(array)
+mergeSortIterativeTest(array)
 p array
