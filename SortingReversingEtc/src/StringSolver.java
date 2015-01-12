@@ -3,8 +3,6 @@ import java.util.HashMap;
 
 public class StringSolver {
 
-	
-	
 	public static String reverseRecurse(String string) {
 		if (string.length() <= 1)
 			return string;
@@ -12,6 +10,22 @@ public class StringSolver {
 		return reverseRecurse(string.substring(1)) + string.charAt(0);
 	}
 	
+	static String reverse(String string) {
+		char[] chars = string.toCharArray();
+		int first = 0;
+		int end = string.length()-1;
+		while (first < end) {
+			char temp = chars[first];
+			chars[first] = chars[end];
+			chars[end] = temp;
+			first += 1;
+			end -= 1;
+		}
+		return new String(chars);
+	}
+	
+	
+	//another version
 	public static String reverseString(String string) {
 		//iterative version
 		//you can't reverse actual string passed as argument because strings are immutable in Java
@@ -22,10 +36,6 @@ public class StringSolver {
 		
 		return result;
 	}
-	
-	
-		
-	
 	
 	public static Object findFirstNonRepeatingCharacter (String string) {
 		HashMap<Character, Integer> h = new HashMap<Character, Integer>();

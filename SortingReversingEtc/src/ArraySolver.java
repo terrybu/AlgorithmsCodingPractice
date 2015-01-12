@@ -1,18 +1,21 @@
 import java.util.Arrays;
 
-public class Main {
+public class ArraySolver {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] array = {32,0,21,-3};
-		mergeSort(array);
+	
+	static void printoutArray(int[] array) {
+		
 		for (int i : array) {
+			
 			System.out.print(i);
 			System.out.print(" ");
 		}
+		
+		System.out.println(" ");
+		
 	}
 	
-	public static void mergeSort(int[] array) {
+	static void mergeSort(int[] array) {
 		//merge sort works by dividing an array into one element arrays recursively
 		//and then building them back up using "merge" 
 		//this mergeSort function itself stays very similar across languages, no need to change this
@@ -34,7 +37,7 @@ public class Main {
 		
 	}
 	
-	private static void merge(int[] original, int[] left, int[] right) {
+	 private static void merge(int[] original, int[] left, int[] right) {
 		//we overwrite the original array with sorted information
 		int iLeft, iRight, i;
 		iLeft = iRight = i = 0;
@@ -68,5 +71,33 @@ public class Main {
 		
 		
 	}
+	
+	static void bubbleSort(int[] array) {	
+		boolean swapped = true;
+		while (swapped) {
+			swapped = false;
+			for (int i=0; i < array.length-1; i++) {
+				if (array[i] > array[i+1]) {
+					int temp = array[i+1];
+					array[i+1] = array[i];
+					array[i] = temp;
+					swapped = true;
+				}
+			}
+		}
+	}
+	
+	static void insertionSort(int[] array) {
+		for (int i=1; i < array.length-1; i++) {
+			int key = array[i];
+			int j = i - 1;
+			while (j >= 0 && array[j] > key) {
+				array[j+1] = array[j];
+				j = j - 1;
+			}
+			array[j+1] = key;
+		}
+	}
+	
 	
 }
