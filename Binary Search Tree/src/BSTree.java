@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 public class BSTree {
 	Node root;
@@ -22,6 +25,19 @@ public class BSTree {
 			depthFirstTraversal(node.left);
 		if (node.right != null)
 			depthFirstTraversal(node.right);
+	}
+	
+	void breadthFirstTraversal()  {
+		Queue<Node> queue = new LinkedList<Node>();
+		queue.add(this.root);
+		while (!queue.isEmpty()) {
+			Node dequeued = queue.remove();
+			System.out.println(dequeued.data);
+			if (dequeued.left != null)
+				queue.add(dequeued.left);
+			if (dequeued.right != null)
+				queue.add(dequeued.right);
+		}
 	}
 	
 	

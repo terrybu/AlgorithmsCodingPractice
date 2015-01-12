@@ -18,10 +18,19 @@ public class Main {
 		Node d = new Node(12, "D");
 		binarySearchTree.insert(d);
 		
-		binarySearchTree.delete(d);
-				
+		Node e = new Node(10, "E");
+		binarySearchTree.insert(e);
+		
+		Node f = new Node(16, "F");
+		binarySearchTree.insert(f);
+		
+		Node g = new Node(3, "G");
+		binarySearchTree.insert(g);
+		
+		
 		binarySearchTree.depthFirstTraversal(binarySearchTree.root);
-
+		System.out.println("");
+		binarySearchTree.breadthFirstTraversal();
 	}
 
 }
