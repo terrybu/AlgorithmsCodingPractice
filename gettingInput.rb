@@ -1,0 +1,3 @@
+n = gets
+
+puts n
