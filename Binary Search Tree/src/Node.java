@@ -2,36 +2,37 @@
 public class Node {
 		Node left;
 		Node right;
-		int key;
-		String data;
+		int data;
+		String stringData;
 		
 		Node() {
 			left = null;
 			right = null;
-			key = 0; 
-			data = null;
+			data = 0; 
+			stringData = null;
 		}
 		
-		Node(int key) {
+		Node(int data) {
 			left = null;
 			right = null;
-			this.key = key; 
+			this.data = data; 
 		}
 		
-		Node(int key, String data) {
+		Node(int data, String stringData) {
 			left = null;
 			right = null;
-			this.key = key; 
-			this.data = data;
+			this.data = data; 
+			this.stringData = stringData;
 		}
 		
+		//can be implemented better recursively on the tree - see bstree
 		public boolean add(Node newNode) {
-			if (this.key == newNode.key) {
+			if (this.data == newNode.data) {
 				System.out.println("found duplicate");
 				return false;
 			}
 			
-			if (newNode.key < this.key){
+			if (newNode.data < this.data){
 				if (this.left == null) {
 					this.left = newNode;
 					return true;
@@ -39,7 +40,7 @@ public class Node {
 				else 
 					this.left.add(newNode);
 			}
-			else if (newNode.key > this.key) {
+			else if (newNode.data > this.data) {
 				if (this.right == null) {
 					this.right = newNode;
 					return true;
@@ -50,6 +51,9 @@ public class Node {
 			return false; 
 		}
 		
+		//this delete implementation is odd in that it doesn't check if root is the one to delete
+		//also, it doesn't reorder nodes that have children  
+		//**only address case 1 where a node has no children
 		public boolean delete(Node node) {
 			if (this.left == node) {
 				this.left = null;
