@@ -28,6 +28,10 @@ public class Main {
 		String test3 = "forrest gump";
 		System.out.println(StringSolver.reverse(test3));
 		
+		SalaryWorker chojiro = new SalaryWorker();
+		chojiro.day = DayOfWeek.MONDAY;
+		chojiro.printWhatHeIsThinking();
+		
 	}
 
 }

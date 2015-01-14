@@ -1,5 +1,7 @@
 package com.terrybu.LinkedList;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class LinkedList {
@@ -174,6 +176,50 @@ public class LinkedList {
 		
 		return false; 
 	}
+	
+	Node findNthLargestNode(int n) {
+		//first we traverse the LinkedList and put all values into an array
+		if (n == 0) //doesn't make sense 0th largest - doesn't count
+			return null;
+		
+		Node current = this.head;
+		ArrayList<Integer> valuesArrayList = new ArrayList<Integer>();
+		HashMap<Integer, Node> hashForValueAndNode = new HashMap<Integer, Node>();
+		while (current != null) {
+			valuesArrayList.add(current.value);
+			hashForValueAndNode.put(current.value, current);
+			current = current.next;
+		}
+		//so now we have a valuesArrayList let's say 8 5 0 -3 2
+		//***note, if user input a N that's larger than this arraylist.size, then we return null with error
+		if (n > valuesArrayList.size()) {
+			System.out.println(n + "th largest element doesn't exist - try smaller number");
+			return null;
+		}
+		//we need an array so we convert
+		int[] sortedArray = convertArrayListIntegersToIntArray(valuesArrayList);
+		//we then sort
+		Arrays.sort(sortedArray);
+		
+		//then, we find the Nth largest
+		int nthLargest = sortedArray[sortedArray.length-n];
+				
+		//afterwards we traverse through the linkedList once more
+		//just looking for that node with that value
+		// **or we could use a hashMap to make this easier
+		return hashForValueAndNode.get(nthLargest);
+		
+	}
+	
+	int[] convertArrayListIntegersToIntArray(ArrayList<Integer> arrayList) {
+		int[] newIntArray = new int[arrayList.size()];
+		for (int i=0; i < newIntArray.length;i++) {
+			newIntArray[i] = arrayList.get(i);
+		}
+		return newIntArray;
+	}
+	
+	
 	
 }
 

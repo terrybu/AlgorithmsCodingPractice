@@ -7,11 +7,11 @@ public class LinkedListMain {
 		
 		LinkedList linkedList = new LinkedList();
 		
-		Node firstNode = new Node("apple");		
+		Node firstNode = new Node("apple", 5);		
 		linkedList.head = firstNode;
 		
-		Node second = new Node("banana");
-		Node third = new Node("blueberries");
+		Node second = new Node("banana", 10);
+		Node third = new Node("blueberries", 15);
 		
 		//Inserting to the beginning of a linkedlist is O(1)
 		linkedList.insertAtBeginning(second);
@@ -23,6 +23,13 @@ public class LinkedListMain {
 		linkedList.traverse();		
 		
 		System.out.println(linkedList.findIfCircularLinkedList());
+		
+		System.out.println(linkedList.findNthLargestNode(1).data);
+		
+		
+		
+		
+		
 		
 //		//Inserting to the end of a list is O(n) if you don't know the tail. If you have tail property, then it's O(1);
 //		linkedList.insertAtEnd(new Node("endObject"));
