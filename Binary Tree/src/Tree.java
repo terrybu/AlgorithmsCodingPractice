@@ -83,9 +83,49 @@ public class Tree {
 		System.out.println("Lowest Common Ancestor between " + p.getStringData() + " and " + q.getStringData() + " is " + answer.getStringData());
 	}
 	
-	void findLongestPathBetweenTwoNodesInTree() {
+	Node findLCARecursion(Node root, Node p, Node q) {
+		if (root == null)
+			return null;
+		
+		if (root == p || root == q)
+			return root;
+		else {
+			Node left = findLCARecursion(root.getLeft(), p, q);
+			Node right = findLCARecursion(root.getRight(), p, q);
+			
+			if (left != null && right != null)
+				return root;		
+			else if  (left != null)
+				return left;
+			else 
+				return right;
+		}
+	}
+	
+	int findDiameter() {
+		//diameter is also the longest distance between two nodes in the tree
+		if (root == null)
+			return 0;
+		
+		//diameter is height of leftsubtree + height of rightsubtree
+		int heightLeft = height(root.getLeft());
+		int heightRight = height(root.getRight());
+		
+		return heightLeft + heightRight;
 				
 	}
+	
+	int height(Node node) {
+		if (node == null)
+			return 0;
+		
+		return 1 + Math.max(height(node.getLeft()), height(node.getRight()));
+		//we do this max checking because all we care about is how deep the tree goes
+		//it might go deeper into left or deeper into right
+		//just return whatever got deeper
+	}
+	
+
 	
 	int findMaxElement(Node node) {
 		int maxInt = node.data;
@@ -97,6 +137,8 @@ public class Tree {
 		}
 		return maxInt; 
 	}
+	
+	
 	
 	
 }

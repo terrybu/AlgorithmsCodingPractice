@@ -50,6 +50,10 @@ public class Main {
     	binaryTree.printAncestor(i, h);
     	
     	System.out.println(binaryTree.findMaxElement(binaryTree.root));
+    	
+    	System.out.println(binaryTree.findLCARecursion(binaryTree.root, a, e).getStringData());
+    	
+    	System.out.println(binaryTree.findDiameter());
 	}
 
 }

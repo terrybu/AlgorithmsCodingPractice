@@ -113,7 +113,7 @@ public class LinkedList {
 		else {
 			Node next = node.next; //a b c d - next is c, trying to delete b
 			node.data = next.data; //a c c d 
-			node.next = next.next; //a c d - jump a pointer from first c to d - deallocate second c
+			node.next = next.next; //a c d - jump a pointer from first c to d
 		}
 	}
 	
