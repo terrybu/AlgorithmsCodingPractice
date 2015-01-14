@@ -3,6 +3,7 @@ public class Node {
 	private Node right;
 	private String stringData;
 	public Node parent; 
+	public int data;
 	
 	public Node getLeft() {
 		return left;
@@ -28,10 +29,11 @@ public class Node {
 		this.stringData = stringData;
 	}
 
-	public Node(Node left, Node right, String string) {
+	public Node(Node left, Node right, String string, int data) {
 		this.left = left;
 		this.right = right;
 		this.stringData = string;
+		this.data = data;
 	}
 	
 	public Node() {

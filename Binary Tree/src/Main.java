@@ -4,15 +4,16 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Node a = new Node(null, null, "A");
-		Node b = new Node(null, null, "B");
-		Node c = new Node(null, null, "C");		
-		Node d = new Node(null, null, "D");
-		Node e = new Node(null, null, "E");
-		Node f = new Node(null, null, "F");
-		Node g = new Node(null, null, "G");
-		Node i = new Node(null, null, "I");
-		Node h = new Node(null, null, "H");
+		//unordered binary tree
+		Node a = new Node(null, null, "A", 1);
+		Node b = new Node(null, null, "B", 2);
+		Node c = new Node(null, null, "C", 3);		
+		Node d = new Node(null, null, "D", 4);
+		Node e = new Node(null, null, "E", 5);
+		Node f = new Node(null, null, "F", 6);
+		Node g = new Node(null, null, "G", 7);
+		Node i = new Node(null, null, "I", 8);
+		Node h = new Node(null, null, "H", 9);
 		
 		f.setLeft(b);
 		f.setRight(g);
@@ -40,13 +41,15 @@ public class Main {
 		System.out.println("");
 		binaryTree.postorderTraversal(f);
 		System.out.println("");
-		binaryTree.breadthFirstTraversal(g);
+		binaryTree.breadthFirstSearch(g);
 		System.out.println("");
 
     	binaryTree.printAncestor(b, g);
     	binaryTree.printAncestor(a, h);
     	binaryTree.printAncestor(a, e);
     	binaryTree.printAncestor(i, h);
+    	
+    	System.out.println(binaryTree.findMaxElement(binaryTree.root));
 	}
 
 }

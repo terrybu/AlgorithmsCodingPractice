@@ -30,7 +30,7 @@ public class Tree {
 		System.out.print(node.getStringData() + " ");
 	}
 	
-	void breadthFirstTraversal(Node node) {
+	void breadthFirstSearch(Node node) {
 		Queue <Node> queue = new LinkedList<Node>();
 		if (this.root == null)
 			return;
@@ -81,7 +81,22 @@ public class Tree {
 	void printAncestor(Node p, Node q) {
 		Node answer = this.findLowestCommonAncestor(p, q);
 		System.out.println("Lowest Common Ancestor between " + p.getStringData() + " and " + q.getStringData() + " is " + answer.getStringData());
-		
 	}
+	
+	void findLongestPathBetweenTwoNodesInTree() {
+				
+	}
+	
+	int findMaxElement(Node node) {
+		int maxInt = node.data;
+		if (node.getLeft() != null) {
+			maxInt = Math.max(maxInt, findMaxElement(node.getLeft()));
+		}
+		if (node.getRight() != null) {
+			maxInt = Math.max(maxInt, findMaxElement(node.getRight()));
+		}
+		return maxInt; 
+	}
+	
 	
 }
