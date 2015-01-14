@@ -151,6 +151,29 @@ public class LinkedList {
 		return current;
 	}
 	
+	boolean findIfCircularLinkedList() {
+		//O(N)
+		Node fastPointer, slowPointer;
+		//if fastPointer reaches null, then it's not circular
+		//if fastPointer ever reaches slowPointer or its next equals slowPointer, its cyclical
+		slowPointer = this.head;
+		fastPointer = this.head.next;
+		
+		if (slowPointer == null || fastPointer == null)
+			return false; 
+		
+		if (fastPointer == null || fastPointer.next == null)
+			return false;
+		
+		while (fastPointer != null) {
+			if (fastPointer == slowPointer || fastPointer.next == slowPointer)
+				return true;
+			slowPointer = slowPointer.next;
+			fastPointer = fastPointer.next.next;
+		}
+		
+		return false; 
+	}
 	
 }
 

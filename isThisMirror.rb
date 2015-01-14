@@ -28,3 +28,7 @@ end
 
 puts isMirror(1221)
 puts isMirror(12021)
+puts isMirror("abbba")
+puts isMirror("abba")
+puts isMirror("cfdsaf")
+puts isMirror(1921)

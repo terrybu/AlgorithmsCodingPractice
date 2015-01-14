@@ -19,6 +19,8 @@ public class BSTree {
 		root.delete(node);
 	}
 	
+
+	
 	void depthFirstTraversal(Node node) {
 		System.out.println(node.data);		
 		if (node.left != null)
