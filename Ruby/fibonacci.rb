@@ -12,9 +12,9 @@ def runFiboWithTimeChecking(n)
 	t1 = Time.now.to_f
 	fibonacci(n) 
 	t2 = Time.now.to_f
-	executionTimeFiboWithoutCache = t2 - t1
-	puts "executionTimeFiboWithoutCache: #{executionTimeFiboWithoutCache}"
-	return executionTimeFiboWithoutCache
+	executionTimeFiboRecursiveWithoutCache = t2 - t1
+	puts "executionTimeFiboRecursiveWithoutCache: #{executionTimeFiboRecursiveWithoutCache}"
+	return executionTimeFiboRecursiveWithoutCache
 end
 
 
@@ -59,8 +59,8 @@ end
 
 
 
-def fibonacciCreateArray(n)
-	#don't have to do it recursively. Just do it free
+def fibonacciArrayVersion(n)
+	#don't have to do it recursively. this is an iterative solution
 	f = []
 	f[0] = 0
 	f[1] = 1
@@ -72,4 +72,8 @@ def fibonacciCreateArray(n)
 	return f
 end
 
-p fibonacciCreateArray(15)
+	t3 = Time.now.to_f
+	p fibonacciArrayVersion(15)
+	t4 = Time.now.to_f
+	executionTimeFiboArrayVersion = t4 - t3
+	puts "executionTimeFiboArrayVersion: #{executionTimeFiboArrayVersion}"
