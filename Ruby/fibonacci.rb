@@ -69,8 +69,9 @@ def fibonacciArrayVersion(n)
 		f[i] = f[i-2] + f[i-1]
 	end
 
-	return f
+	return f[n]
 end
+
 
 	t3 = Time.now.to_f
 	p fibonacciArrayVersion(15)
