@@ -53,7 +53,7 @@ end
 
 def findFirstNonrepeatingDictionary(string)
 	charsArray = string.split("")
-	countDict = Hash.new
+	countDict = {}
 	for char in charsArray
 		if countDict[char]
 			countDict[char] += 1
