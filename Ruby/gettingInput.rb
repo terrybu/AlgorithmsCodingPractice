@@ -1,3 +1,4 @@
+puts "type your name"
 n = gets
 
-puts n
+puts "hello " + n
