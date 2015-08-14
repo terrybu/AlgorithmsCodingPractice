@@ -56,7 +56,7 @@ def hashMapVersion(string)
 	for i in (0..chars.length-1)
 		char = chars[i]
 		#hashmap is char: counter, ex) "b" : 3
-		if hash.has_key?(char)
+		if hash[char]
 			hash[char] += 1 
 		else 
 			hash[char] = 1
