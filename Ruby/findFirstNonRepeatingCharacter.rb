@@ -1,6 +1,6 @@
-#Given a string of characters, find the first unique non-repeating character of the string
+#Given a string of characters, find the first unique character of the string
 
-def findFirstNonRepeatingCharacter(string)
+def findFirstUniqueCharacter(string)
 
 	#we are going to create a hash map in this first loop over the string.
 	#where key is the string and the value is the # of count it occurs in the string
@@ -29,4 +29,4 @@ def findFirstNonRepeatingCharacter(string)
 end
 
 
-puts findFirstNonRepeatingCharacter("aaaabbbbcaaaabbb")
+puts findFirstUniqueCharacter("aaaabbbbcaaaabbb")
