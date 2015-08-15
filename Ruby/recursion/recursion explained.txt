@@ -1,0 +1,22 @@
+Recursion works with the "call stack" which stores "Frames" that store variables while the functions run recursively
+
+Ex) Take factorial(4) for example
+we do 
+if n == 1
+	return 1
+else
+	n * factorial(N-1)
+
+1) The call stack then stores the frame for factorial(4) at the bottom of the stack which says "well, I don't know what factorial(3) is but I AM 4 * whatever factorial(3) gives me
+2) then we go up one frame, factorial(3) which says "well, I don't know what factorial(2) is but I AM 3 * factorial(2)
+3) .... we go all the way stacking up frames until we get to base case of factorial(1) which says "hey I'm 1"
+4) we go down the stack frames. Factorial(2) says great, so I'm 2 * 1
+5) We go back down the stack frames until we come all the way back to 4 * 3 * 2 * 1
+
+
+Strategy
+1) Find "base case" first ---> where the recursion is supposed to end and come back down the stack
+ex) n==0, n==1
+
+2) Return function(n) and then function(n-1)
+
