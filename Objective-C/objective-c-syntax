@@ -1,0 +1,67 @@
+
+//functions in objective-c 
+
+- (void) viewDidLoad {
+	[self doSomething];
+	[self returnAString: @"someString"];
+}
+
+- (void) doSomething {
+	return 	
+}
+
+- (NSString *) returnAString: (NSString*) someStringArg {
+	NSString* string = @"hello";
+	return string;	
+}
+
+- (void) forLoopExample: (NSMutableArray*) array stringForFun: (NSString *) string {
+	
+	for (int i=0; i < array.count; i++) {
+		CustomObject* object = array[i];
+		NSLog(@"%@ is the name of %@", object.name, string);
+	}
+}
+
+
+//class declaration
+
+h file 
+@interface TBDictionary : NSObject
+- (void) sayHello;
+
+m file 
+@implementation TBDictionary
+
+- (id) init {
+    if (self = [super init]) {
+        self.keys = [[NSMutableArray alloc] initWithObjects: nil];
+        self.values = [[NSMutableArray alloc] initWithObjects: nil];
+    }
+    return self;
+}
+
+- (void) findValueAtKey:(id)key {
+    //find the index of the passed argument key out of the keys arrays
+    //What index is it?
+    NSUInteger index = [self.keys indexOfObject:key];
+    
+    //then find the value with the same index in the values array
+    NSString *resultValue = self.values[index];
+    
+    NSLog(@"%@", resultValue);
+}
+
+
+
+//if else statements
+
+if (x == 10) {
+	NSLog (@"x is 10");
+} else if (x == 9) { 
+	NSLog (@"x is 9");
+} else if (x == 8) { 
+	NSLog (@"x is 8");
+} else {
+	NSLog(@"boo");
+}

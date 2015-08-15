@@ -1,4 +1,5 @@
-string = "canyoureversethis"
+
+testStrings = ["canyoureversethis", "asdf", "tomato", "racecar"]
 
 #brainstorm
 #1) two counters meet at middle approach
@@ -22,5 +23,21 @@ def reverseString(string)
 	return string
 end
 
-p reverseString(string)
-p reverseString("")
+for string in testStrings
+	p reverseString(string)
+end
+
+
+testStrings = ["canyoureversethis", "asdf", "tomato", "racecar"]
+
+
+def reverseRecursive(string)
+	if string.length <= 1
+		return string
+	end
+	return reverseRecursive(string[1..-1]) + string[0]
+end
+
+for string in testStrings
+	p reverseRecursive(string)
+end

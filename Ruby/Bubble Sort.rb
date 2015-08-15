@@ -1,5 +1,7 @@
 def bubbleSort(array)
-	#the point of bubble sort is that we are going to keep iterating over this array and check if an element is greater than the one on the right. If yes, we "swap". Once you find that an element is less than the one on the right, we go to the next element, and we make sure we hit every element this way
+	#the point of bubble sort is that we are going to keep iterating over this array and check if an element is greater than the one on the right. 
+	#If yes, we "swap". 
+	#Once you find that an element is less than the one on the right, we go to the next element, and we make sure we hit every element this way
 	#but at the end of this laborious work, we do it AGAIN if a "swap" has been made
 	#we keep doing this until a "Swap" is not made at all during an iteration
 
