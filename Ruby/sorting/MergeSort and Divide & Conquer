@@ -1,0 +1,10 @@
+MergeSort and Divide & Conquer
+
+- Divide and Conquer refers to an algorithm where you can divide an algorithm to subproblems
+- Then you "conquer" each subproblem. If it's small enough to be a base case, you return that value for the subproblem
+- Then you "Combine" the conquered subproblems to get to your original solution
+
+Problem
+--> broken into 2 subproblems
+--> Conquer subproblems --> (1,2)
+--> Combine them to reach your solution (3)
