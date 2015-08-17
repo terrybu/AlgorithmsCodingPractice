@@ -1,0 +1,16 @@
+Two types
+1) Singly Linked List --> Node has a "next" pointer
+2) Doubly Linked List --> Node also has a "previous" pointer
+
+class LinkedList {
+	Node head;
+	Node tail; 
+}
+
+class Node {
+	public Node next;
+	public int data; 
+}
+
+null --> A --> B --> C -- > null
+

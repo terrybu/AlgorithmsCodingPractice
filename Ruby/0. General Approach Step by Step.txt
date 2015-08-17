@@ -1,0 +1,34 @@
+#1 Confirm the Problem
+	--> You don't wanna make the naive mistake of confusing it with some other problem
+	--> Test your assumptions
+	--> It’s often left general for a reason
+		Ask a shit load of questions 
+
+#2 Write out the signature
+	--> Make sure you are clear on the input (parameter type) and the output (return type)
+
+#3 Think of examples
+	--> Write out some example inputs 
+	--> Identify any edge cases that might come up
+	--> will help you later when you are right in the coding ... you can look at these examples/edge cases for reference
+
+#4 Brainstorming
+	--> Draw pictures
+	--> Talk out how to approach this problem
+	--> Don't go silent during any process. Talk it out loud and explain yourself. Be very transparent
+
+#5 Pseudocode 
+
+#6 Code it out
+
+#7 Double-test your solution
+	--> Find bugs yourself 
+	--> It's worse if your interviewer finds bugs that you can't find
+
+Tips: 
+1) Don't go silent during any process. Talk it out loud and explain yourself. Be very transparent
+2) If you are stuck, test your code line by line with an input
+3) You will make mistakes. That’s okay. Take a deep breathe and keep attacking it (off by one error, etc, are trivial and can be fixed easily)  
+4) Sometimes, you can just call a "method" and move on. Come up with a method like (sort, reverse, merge) and then focus on the higher-level flow first, and then if interviewer asks, implement that method later
+
+	
