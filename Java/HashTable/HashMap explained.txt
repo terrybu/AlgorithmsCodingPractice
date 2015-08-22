@@ -1,0 +1,25 @@
+HashMap explained
+
+Hash Map or a Hash Table is a data structure used to implement an unordered "associative array", a structure that maps keys to values.
+	- A Hash Table uses a "hash function" to calculate the index at which the "value" should go into inside an array of "buckets". 
+	- Hash function returns a number within a limited range
+	- A bucket is usually an Object that has key and value as its members
+	- Once you decide to map a key value into the table, you run the "key" through a hash function
+		Ex) hashFunction(key) --> //spits out some index 32 
+	- And the "bucket object" gets put in that index 32
+	- Getting the value is the same. You run the "key" to the hashFunction and spits out the same index. And then we go to that index in the buckets array and retrieve the value
+
+***one big Gotcha with Hash Maps is that "collisions" occur. 
+	- There's a limit to the # of indexes that can be used for the bucketsArray (you need to initialize an array of certain size in the beginning) but there may be no limit to the # of keys. 
+	- When a hash function maps two different keys to the same hash, a collision occurs. 
+	- Collisions are almost impossible to prevent, because it's impossible to create buckets array of the "right" size in advance, because it is not known how many elements will need to be held simultaneously during the lifetime of the hash table. 
+	- If you want to keep fast access, you need to resize the table from time to time as the number of element grows. Collisions add an element of unpredictability to the performance of a hash table
+	- One workaround for collisions is using a linked list of bucket objects, instead of just one bucket element ---> although this makes access O(n) as the linked list grows. 
+
+What's O(n) for worst case in hash table?
+Hash tables are impressive in that they are O(1) for retrieval, insertion and deletion.
+But then it becomes O(n) when you start chaining. To get around O(n), resize your table. 
+
+
+"Associate array" or "Dictionary" or "Map" is an ABSTRACT data type that refers to a collection of key, value pairs. It's the general term for the "type" and Hash Maps are a TYPE OF associate arrays.
+***We practiced implementing a simple Dictionary at TurnToTech when we used two arrays. An array of keys and an array of values. Whenever we asked Dictionary["keyName"], we went to the keys array, found its index, and then applied that same index to the array of values to fetch it value

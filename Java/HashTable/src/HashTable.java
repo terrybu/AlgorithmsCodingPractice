@@ -1,6 +1,7 @@
 public class HashTable {
 
-	HashEntry[] bucketsArray; //holds key-value pairs (hash entries)
+	HashEntry[] bucketsArray; 
+	//holds key-value pairs (hash entries)
 	
 	HashTable() {
 		this.bucketsArray = new HashEntry[300000000]; //

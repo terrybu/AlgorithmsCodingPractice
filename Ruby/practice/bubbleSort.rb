@@ -15,19 +15,29 @@
 test = [2,5,10,2,100,4,500,0,-5]
 
 def bubbleSort(array)
-	swapped = true
-	while swapped
-		swapped = false
-		for i in 0..array.length-1
-			for j in i+1..array.length-1
-				if array[i] > array[j]
-					array[i], array[j] = array[j], array[i]
-					swapped = true
-				end
-			end
-		end
-	end
-	return array
+  
+  #swap boolean logic 
+  swapped = true
+  
+  while swapped 
+  #element swap logic 
+    swapped = false #change it right away and see if in the iteration, swap occurs then change back
+    for i in (0..array.length-2)
+      if array[i] > array[i+1]
+        array[i], array[i+1] = array[i+1], array[i]
+        swapped = true 
+      end
+    end 
+  end
+  return array
 end
 
 p bubbleSort(test)
+
+
+
+#TIPS IN BUBBLE SORT
+#If you understand the general concept, the code becomes easy. You won't have to build all from memory
+#Instead break it into different parts
+#1) build the for loop that iterates over every single character and swaps it to the one to the right if array[i] is larger
+#2) build out the swap logic, knowing that it's a nested loop and a loop that goes on forever until swap is false

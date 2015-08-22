@@ -1,0 +1,18 @@
+rubyConventions.txt
+
+*two spaces for indentation instead of tabs
+*# for comments
+*=begin and =end for multi line comments
+
+*primitives like int are pass by value while objects like strings and arrays are pass by reference value (meaning pass by pointer, objects can be manipulated inside the scope of functions)
+
+*a**b will give a to the power of b
+
+and or && is same
+or --> || is same
+! --> not is same
+
+== is equality (tests both type and value)
+=== is not an equality operator in Ruby
+	a === b tests if b.is_a?(a)
+	is b an instance of the class a?

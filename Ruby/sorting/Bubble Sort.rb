@@ -14,6 +14,11 @@ def bubbleSort(array)
 	#when the swappedBoolean  never gets changed by the end of the iteration,
 	#we know that the sorting has ended so we return the array
 
+	#edge case
+	if array.length <= 1
+		return array
+	end
+
 	swappedBoolean = true
 
 	while (swappedBoolean == true)
@@ -33,3 +38,4 @@ def bubbleSort(array)
 end
 
 p bubbleSort([0,-2, 1,2,33,5,13,12,51,3,122,1])
+p bubbleSort([1])

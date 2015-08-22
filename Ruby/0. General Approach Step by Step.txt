@@ -1,27 +1,41 @@
-#1 Confirm the Problem
+#1 Clarify the Question and confirm you understand the question correclty
 	--> You don't wanna make the naive mistake of confusing it with some other problem
 	--> Test your assumptions
+		--> "the input is an array of integers?"
+		--> "it's an unsorted array?"
+		--> "can number in array be either -1 or 0?"
+		--> "should the function return true or false, or return some values?"
 	--> It’s often left general for a reason
 		Ask a shit load of questions 
 
-#2 Write out the signature
+#2 Write out the function signature
 	--> Make sure you are clear on the input (parameter type) and the output (return type)
+		Ex) boolean hasPairThatSumsToTarget(int[] numbers, int targetSum)
+		Ex) Or in Ruby, it's all just def ... so write out 
+			parameters --> int[] array , int targetSum
+			output --> boolean 
 
 #3 Think of examples
 	--> Write out some example inputs 
+		Ex) [-1, 0, 1], 0 .. huh, if that's example input, that should return true
+		Ex) [], 2 ... hmm that should return false
 	--> Identify any edge cases that might come up
+		--> input is nil
+		--> input is negative #s
+		--> input array contains duplicates: [1, 1, 4]
 	--> will help you later when you are right in the coding ... you can look at these examples/edge cases for reference
 
-#4 Brainstorming
+#4 Brainstorm the Big Picture Approach
 	--> Draw pictures
 	--> Talk out how to approach this problem
 	--> Don't go silent during any process. Talk it out loud and explain yourself. Be very transparent
+	Ex) "brute force approach might be this .. O(n^2) using two for loop .. a smarter approach ... blah blah"
 
 #5 Pseudocode 
 
 #6 Code it out
 
-#7 Double-test your solution
+#7 Test your code line by line
 	--> Find bugs yourself 
 	--> It's worse if your interviewer finds bugs that you can't find
 

@@ -1,0 +1,12 @@
+9musties 
+
+****9 musties
+1) Fizzbuzz 
+2) Fibonacci (iterative and recursive, and with memoization)
+3) Reverse a string (iterative and recursive)
+4) find if nested
+5) Bubble sort
+6) insertion sort
+7) find if palindrome
+8) find if anagram
+9) find the first non-repeating character

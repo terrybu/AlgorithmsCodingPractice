@@ -1,0 +1,4 @@
+Memoization is a programming technique which attempts to increase a function’s performance by caching its previously computed results
+
+***Very oftentimes used as an "optimization" techinque for fibonacci
+*store the previously computed results into a hashmap or a dictionary

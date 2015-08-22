@@ -18,7 +18,6 @@ def findFirstUniqueCharacter(string)
 	end
 
 	#in this second loop, we are going to loop over the string one more time, and see if that letter, when compared against the hash, has the value of 1
-
 	for i in 0..string.length-1
 		letter = string[i]
 		if (h[letter] == 1)
