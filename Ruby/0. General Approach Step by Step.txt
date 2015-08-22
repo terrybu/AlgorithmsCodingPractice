@@ -45,4 +45,7 @@ Tips:
 3) You will make mistakes. That’s okay. Take a deep breathe and keep attacking it (off by one error, etc, are trivial and can be fixed easily)  
 4) Sometimes, you can just call a "method" and move on. Come up with a method like (sort, reverse, merge) and then focus on the higher-level flow first, and then if interviewer asks, implement that method later
 
-	
+
+
+***Language specific tips:
+1) Apparently for algo questions, it's fine to have a ruby-doc.org and look at documentation to look up method references

@@ -1,0 +1,9 @@
+Sorting Tips
+
+- Industry standard is merge sort or quick sort
+	--> merge sort is both best case and worst case O(n log n)
+	--> quick sort is average O(n log n) ... worst case O(n^2)
+
+- In an interview, you ask "can i use the built-in sort method?"
+	-- Or write your own (learn some merge sort or quick sort O(n log n))
+	
