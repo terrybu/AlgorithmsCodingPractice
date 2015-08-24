@@ -56,3 +56,5 @@ def properlyNested(string)
     end
     
 end
+
+p properlyNested('aldjf')
