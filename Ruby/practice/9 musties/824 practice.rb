@@ -49,3 +49,16 @@ def fizzbuzzStringConcat(array)
 end
 
 fizzbuzzStringConcat(exampleInput)
+
+
+
+def reverseString(str)
+	result = ""
+	(str.length-1).step(0, -1) do |i|
+		char = str[i]
+		result = result + char
+	end
+	return result
+end
+
+p reverseString("string")
