@@ -1,0 +1,31 @@
+Tips: 
+1) Don't go silent during any process. You must keep talking to let the interviewer know what you're thinking, where you're going, and what problems you're encountering.
+2) You will make mistakes. That’s okay. Take a deep breathe and keep attacking it (off by one error, etc, are trivial and can be fixed easily. Don't freak out)
+
+Don't rush into begin coding until: 
+(1) You have a general approach thought out before jumping into code 
+(2) You've clarified assumptions and edge cases 
+If you start coding before completing this first step, it will come off as a red flag to the interviewer.
+
+Do Brute Force if that's only thing you know 
+	= If you know of an obvious brute force solution and only have a hazy idea about a possibly better solution, start with the brute force solution and explain to the interviewer that you’re starting with a simple brute force approach and will see if you can improve it after you have something working.
+	= Something is better than nothing, and incrementally improving your code will suggest you have a clear, algorithmic thought process.
+
+Always listen to an interviewer’s hints.
+
+You can jump over tiny function or feature of a language: 
+	If you’re unsure about a specific function or feature of the language you’re using that isn't common knowledge, ask the interviewer if you can assume that a certain functionality exists and behaves in certain way. Often the interviewer will allow you to make that assumption (even if it doesn’t exist) with little or no penalty.
+
+If you get stuck, tell the interviewer you are stuck and explain why.
+
+TAKE AS LONG AS YOU WANT TESTING YOUR CODE (DO NOT FEEL RUSHED WHEN TESTING)
+- When you are done, DO NOT worry about taking too long to test your code for correctness unless the interviewer CLEARLY indicates your solution is correct. 
+- The interviewer will usually only give you one chance to test for correctness.
+
+Only when you are absolutely sure, go ahead and say
+	- "I think this looks reasonable. I think I will hand it over to you"
+
+
+	
+***Language specific tips:
+1) Apparently for algo questions, it's fine to have a ruby-doc.org and look at documentation to look up method references
