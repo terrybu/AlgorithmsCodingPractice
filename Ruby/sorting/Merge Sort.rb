@@ -1,20 +1,20 @@
-def mergeSortIterativeTest(array)
+def mergeSort(array)
 	if array.length <= 1
 		return array
 	end
 
-	midpoint = array.length/2
-	leftArray = array[0...midpoint]
-	rightArray = array[midpoint...array.length]
+	midpoint = array.length/2 #if length is 5, then midpoint becomes 2.5. Better to floor/round it and make it 2
+	leftArray = array[0...midpoint] #if length was 5, then this is [0, 1]
+	rightArray = array[midpoint...array.length] #[2,3,4]
 
-	mergeSortIterativeTest(leftArray)
-	mergeSortIterativeTest(rightArray)
+	mergeSort(leftArray)
+	mergeSort(rightArray)
 
-	mergeIteratively(array, leftArray, rightArray)
+	mergeIntoOriginal(array, leftArray, rightArray)
 end
 
 
-def mergeIteratively(original, left, right) 
+def mergeIntoOriginal(original, left, right) 
 	iLeft = iRight = i = 0 
 
 	while i < original.length
@@ -36,5 +36,5 @@ def mergeIteratively(original, left, right)
 end
 
 array = [-2,100,5,1000,3]
-mergeSortIterativeTest(array)
+mergeSort(array)
 p array

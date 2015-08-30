@@ -32,6 +32,7 @@ for i in testInputs
 	p celebrateHalf(i)
 end
 
+p 2.5.round
 
 
 
