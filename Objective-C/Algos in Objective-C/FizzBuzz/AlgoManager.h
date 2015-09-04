@@ -19,4 +19,6 @@
 + (NSString *) reverseString: (NSString *) string;
 + (NSString *) reverseStringIteratively: (NSString *) string;
 
++ (int) fibonacci: (int) n memoDict: (int[]) cacheArray;
+
 @end

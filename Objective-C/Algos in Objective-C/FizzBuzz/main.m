@@ -45,7 +45,10 @@ int main(int argc, const char * argv[]) {
         NSString *testStr = @"flip this";
         NSLog(@"%@", [AlgoManager reverseString:testStr]);
         NSLog(@"%@", [AlgoManager reverseStringIteratively:testStr]);
-
+        
+        int memo[100] = {};
+        int nthTerm = [AlgoManager fibonacci:10 memoDict:memo];
+        NSLog(@"%i", nthTerm);
         
     }
     return 0;

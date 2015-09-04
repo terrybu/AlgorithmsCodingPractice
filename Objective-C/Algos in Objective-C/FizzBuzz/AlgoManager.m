@@ -86,6 +86,19 @@
     return nil;
 }
 
++ (int) fibonacci: (int) n memoDict: (int[]) cacheArray {
+    if (n==0) {
+        return 0;
+    } else if (n==1) {
+        return 1;
+    }
+    
+    if (cacheArray[n] == 0) {
+        cacheArray[n] = [self fibonacci: n-2 memoDict:cacheArray] + [self fibonacci:n-1 memoDict:cacheArray];
+    }
+    
+    return (int) cacheArray[n];
+}
 
 
 
