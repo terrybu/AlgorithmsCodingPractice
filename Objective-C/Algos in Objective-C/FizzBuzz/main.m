@@ -50,6 +50,11 @@ int main(int argc, const char * argv[]) {
         int nthTerm = [AlgoManager fibonacci:10 memoDict:memo];
         NSLog(@"%i", nthTerm);
         
+        NSArray *leftSorted = @[@2,@3,@4,@5];
+        NSArray *rightSorted = @[@1, @10, @50];
+        NSMutableArray *result = [AlgoManager merge:(NSArray *) leftSorted rightArray:(NSArray *)rightSorted];
+        NSLog(@"%@", result.description);
+        
     }
     return 0;
 }

@@ -100,6 +100,38 @@
     return (int) cacheArray[n];
 }
 
++ (NSMutableArray *) merge: (NSArray *) leftArray rightArray: (NSArray *) rightArray {
+    //merging two sorted integer arrays
+    int i = 0;
+    int iLeft = 0;
+    int iRight = 0;
+    long leftLen = leftArray.count;
+    long rightLen = rightArray.count;
+    long arrayLen = leftLen + rightLen;
+    NSMutableArray *result = [[NSMutableArray alloc]initWithCapacity:arrayLen];
+    
+    while (i <= arrayLen) {
+        if (iLeft >= leftLen && iRight < rightLen) {
+            result[i] = rightArray[iRight];
+            iRight++;
+        }
+        else if (iRight >= rightLen && iLeft < leftLen) {
+            result[i] = leftArray[iLeft];
+            iLeft++;
+        }
+        else if (iLeft < leftLen && leftArray[iLeft] <= rightArray[iRight]) {
+            result[i] = leftArray[iLeft];
+            iLeft++;
+        }
+        else if (iRight < rightLen && rightArray[iRight] <= leftArray[iLeft]) {
+            result[i] = rightArray[iRight];
+            iRight++;
+        }
+        i++;
+    }
+    return result;
+}
+
 
 
 @end
