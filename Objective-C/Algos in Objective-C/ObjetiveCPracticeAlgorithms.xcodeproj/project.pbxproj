@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D97E60FE1B7923F50057FA02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D97E60FD1B7923F50057FA02 /* main.m */; };
-		D97E61061B7929F80057FA02 /* ObjectiveCPracticeAlgoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D97E61051B7929F80057FA02 /* ObjectiveCPracticeAlgoManager.m */; };
+		D97E61061B7929F80057FA02 /* AlgoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D97E61051B7929F80057FA02 /* AlgoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		D97E60FA1B7923F50057FA02 /* ObjetiveCPracticeAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjetiveCPracticeAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97E60FD1B7923F50057FA02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D97E61041B7929F80057FA02 /* ObjectiveCPracticeAlgoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCPracticeAlgoManager.h; sourceTree = "<group>"; };
-		D97E61051B7929F80057FA02 /* ObjectiveCPracticeAlgoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCPracticeAlgoManager.m; sourceTree = "<group>"; };
+		D97E61041B7929F80057FA02 /* AlgoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgoManager.h; sourceTree = "<group>"; };
+		D97E61051B7929F80057FA02 /* AlgoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				D97E60FD1B7923F50057FA02 /* main.m */,
-				D97E61041B7929F80057FA02 /* ObjectiveCPracticeAlgoManager.h */,
-				D97E61051B7929F80057FA02 /* ObjectiveCPracticeAlgoManager.m */,
+				D97E61041B7929F80057FA02 /* AlgoManager.h */,
+				D97E61051B7929F80057FA02 /* AlgoManager.m */,
 			);
 			name = Practice;
 			path = FizzBuzz;
@@ -125,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97E60FE1B7923F50057FA02 /* main.m in Sources */,
-				D97E61061B7929F80057FA02 /* ObjectiveCPracticeAlgoManager.m in Sources */,
+				D97E61061B7929F80057FA02 /* AlgoManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

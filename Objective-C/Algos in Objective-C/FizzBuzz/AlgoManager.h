@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ObjectiveCPracticeAlgoManager : NSObject
+@interface AlgoManager : NSObject
 
 
 
 + (void) runFizzBuzz: (int[]) array;
++ (void) runFizzBuzzWithNS: (NSArray*) array;
+
 + (NSString *) returnOurNewAutoCompleteString: (NSString *) string wordsSet: (NSSet *) set;
 + (NSString *) reverseString: (NSString *) string;
-
++ (NSString *) reverseStringIteratively: (NSString *) string;
 
 @end
