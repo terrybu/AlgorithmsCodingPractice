@@ -49,11 +49,19 @@ int main(int argc, const char * argv[]) {
         int memo[100] = {};
         int nthTerm = [AlgoManager fibonacci:10 memoDict:memo];
         NSLog(@"%i", nthTerm);
+//        
+//        NSArray *leftSorted = @[@2,@3,@4,@5];
+//        NSArray *rightSorted = @[@1, @10, @50];
+//        NSMutableArray *result = [AlgoManager merge:(NSArray *) leftSorted rightArray:(NSArray *)rightSorted];
+//        NSLog(@"%@", result.description);
         
-        NSArray *leftSorted = @[@2,@3,@4,@5];
-        NSArray *rightSorted = @[@1, @10, @50];
-        NSMutableArray *result = [AlgoManager merge:(NSArray *) leftSorted rightArray:(NSArray *)rightSorted];
-        NSLog(@"%@", result.description);
+        NSMutableArray *unsortedArray = [[NSMutableArray alloc]initWithArray:@[@3, @0, @2, @10, @5, @4]];
+        [AlgoManager mergeSort:unsortedArray];
+        NSLog(@"%@", unsortedArray.description);
+
+        NSArray *testArray = @[@3, @0, @2, @10, @5, @4];
+        NSLog(@"%@", [AlgoManager findTwoNumsThatSumTo:9 array:testArray]);
+
         
     }
     return 0;

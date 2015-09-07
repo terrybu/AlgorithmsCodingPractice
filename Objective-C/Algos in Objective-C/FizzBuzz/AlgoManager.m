@@ -100,36 +100,88 @@
     return (int) cacheArray[n];
 }
 
-+ (NSMutableArray *) merge: (NSArray *) leftArray rightArray: (NSArray *) rightArray {
++ (void) mergeSort: (NSMutableArray *) sortThisArray {
+    
+    //Don't forget this base condition 
+    if (sortThisArray.count <= 1)
+        return;
+    
+    int midpoint = round(sortThisArray.count/2); //if it's 5 elements, this becomes 3;
+    NSMutableArray *leftArray = [[NSMutableArray alloc] initWithArray:[sortThisArray subarrayWithRange: NSMakeRange(0, midpoint)]]; //0,1,2
+    NSMutableArray *rightArray = [[NSMutableArray alloc]initWithArray:[sortThisArray subarrayWithRange: NSMakeRange(midpoint, sortThisArray.count-midpoint) ]]; //3,4
+    
+    [self mergeSort:leftArray];
+    [self mergeSort:rightArray];
+    [self merge:sortThisArray leftArray:leftArray rightArray:rightArray];
+}
+
++ (void) merge: (NSMutableArray *) original leftArray: (NSArray *) leftArray rightArray: (NSArray *) rightArray {
     //merging two sorted integer arrays
     int i = 0;
     int iLeft = 0;
     int iRight = 0;
     long leftLen = leftArray.count;
     long rightLen = rightArray.count;
-    long arrayLen = leftLen + rightLen;
-    NSMutableArray *result = [[NSMutableArray alloc]initWithCapacity:arrayLen];
+    long arrayLen = original.count;
     
     while (i <= arrayLen) {
         if (iLeft >= leftLen && iRight < rightLen) {
-            result[i] = rightArray[iRight];
+            original[i] = rightArray[iRight];
             iRight++;
         }
         else if (iRight >= rightLen && iLeft < leftLen) {
-            result[i] = leftArray[iLeft];
+            original[i] = leftArray[iLeft];
             iLeft++;
         }
         else if (iLeft < leftLen && leftArray[iLeft] <= rightArray[iRight]) {
-            result[i] = leftArray[iLeft];
+            original[i] = leftArray[iLeft];
             iLeft++;
         }
         else if (iRight < rightLen && rightArray[iRight] <= leftArray[iLeft]) {
-            result[i] = rightArray[iRight];
+            original[i] = rightArray[iRight];
             iRight++;
         }
         i++;
     }
-    return result;
+    return;
+}
+
++ (NSArray *) findTwoNumsThatSumTo: (int) sum array: (NSArray *) array {
+    //GIven an array of numbers, find 2 nums that sum to that number and return it
+    //1. Clarify
+        //Just return the first pair
+    //2. Write out function signature
+    //3. Think of some sample inputs 9, [0,1,2,3,4,5] --> output is [4,5]
+    //ex) [3, 8, 10, 13]
+    //4. General approaches
+        //nested loop O(n^2) ..
+        //if it's a sorted array, we can have two counters, one going from left, other going from right O(n log n) depending on your fastest sorting
+        //we can also use a hash table. Iterate through array once, make a hash with all the nums as keys and then iterate again, looking for sum - int[i], then you return [int[i], sum-int[i]];
+    //5. Test your code
+    
+    //**** REMEMBER in objective-c, NSNumber or @1 is a thin objc-wrapper around C int primitive. It can't do calculations by itself so all heavy-duty algorithm calculations must be done in primitives (in int) still but since NSArray can't contain primitive types, this is how I'm doing it now. 
+    
+    NSMutableDictionary *hash = [[NSMutableDictionary alloc]init];
+    for (int i=0; i < array.count; i++) {
+        NSNumber* num =  array[i];
+        [hash setValue: @(i) forKey:[NSString stringWithFormat:@"%@", num]];
+    }
+    NSLog(@"hash: @%@", hash);
+    //Now we have the hash where {"3": 0, "8": 1 ... }
+    //second loop
+    for (int i=0; i < array.count; i++) {
+        NSNumber* num = array[i]; // let's say num = 4
+        int diff = sum - [num intValue]; //then diff is 9 -4 ... which is 5
+        //does 5 exist in the hash?
+        NSString *diffString = [NSString stringWithFormat:@"%d", diff];
+        if ([hash valueForKey:diffString] != nil) {
+            int answerSecondNum = diff;
+            NSArray *result = @[num, @(answerSecondNum)];
+            return result;
+        }
+    }
+    
+    return nil;
 }
 
 

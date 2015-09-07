@@ -20,5 +20,10 @@
 + (NSString *) reverseStringIteratively: (NSString *) string;
 
 + (int) fibonacci: (int) n memoDict: (int[]) cacheArray;
-+ (NSMutableArray *) merge: (NSArray *) leftArray rightArray: (NSArray *) rightArray;
++ (void) mergeSort: (NSMutableArray *) sortThisArray; 
++ (void) merge: (NSMutableArray *) original leftArray: (NSArray *) leftArray rightArray: (NSArray *) rightArray;
+
+//find two numbers in an array that sum to a certain number
++ (NSArray *) findTwoNumsThatSumTo: (int) sum array: (NSArray *) array;
+
 @end
